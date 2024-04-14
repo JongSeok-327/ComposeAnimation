@@ -50,17 +50,17 @@ fun ClickableMessage(message: Message) {
             }
         )
 
-        if (showDetails.value) {
-            Text(
-                text = message.timestamp.toString()
-            )
-        }
-        // 정말 간단한 예제 1.(AnimatedVisibility 이용)
-//        AnimatedVisibility(visible = showDetails.value) {
+//        if (showDetails.value) {
 //            Text(
 //                text = message.timestamp.toString()
 //            )
 //        }
+        // 정말 간단한 예제 1.(AnimatedVisibility 이용)
+        AnimatedVisibility(visible = showDetails.value) {
+            Text(
+                text = message.timestamp.toString()
+            )
+        }
     }
 }
 
